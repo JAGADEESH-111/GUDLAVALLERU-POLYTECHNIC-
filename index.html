@@ -524,7 +524,7 @@ document.body.style.justifyContent = "unset";
 
       dataContainer.innerHTML = "<h3 style='color:aqua;text-align:center;'>Loading student data...</h3>";
 
-      firebase.database().ref("students/" + pin).once("value").then((snapshot) => {
+    firebase.database().ref("students/" + pin).on("value", (snapshot) => {
 
         const data = snapshot.val();
 
