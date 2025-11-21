@@ -733,66 +733,47 @@ document.body.style.justifyContent = "unset";
       });
 
     }
-
-    function goBack() {
-
+   function goBack() {
   const studentData = document.getElementById("studentData");
-
   studentData.style.display = "none";
 
-  // Remove old form if it already exists
-
   const oldForm = document.getElementById("formSection");
-
   if (oldForm) oldForm.remove();
 
-  // Rebuild the form completely
-
   const form = document.createElement("div");
-
   form.id = "formSection";
-
   form.innerHTML = `
-
     <h2 style='color:aqua;text-align:center;'>ENTER THE DETAILS:</h2>
-
     <div>
-
       <input type="text" class="jaggu" id="pin" placeholder="ENTER PIN NO">
-
       <input type="text" class="jag" id="year" placeholder="ENTER YEAR">
-
       <input list="branches" class="jagu" id="branch" placeholder="SELECT BRANCH">
-
       <datalist id="branches">
-
         <option value="CME"><option value="ECE"><option value="EEE">
-
         <option value="MECH"><option value="CIVIL"><option value="IOT"><option value="AIML">
-
       </datalist>
-
       <button class="ja" onclick="showDetails()">Submit</button>
-
     </div>
-
   `;
-
   document.body.appendChild(form);
 
   // Restore background
-
   document.body.style.backgroundImage = "url('https://i.postimg.cc/FFxsTq4c/gradient-abstract-wireframe-background-23-2149009903.jpg')";
-
   document.body.style.backgroundSize = "cover";
-
   document.body.style.backgroundPosition = "center";
-
   document.body.style.backgroundAttachment = "fixed";
-
   document.body.style.transition = "background 1s ease-in-out";
 
-    }
+ 
+  document.body.style.display = "flex";
+  document.body.style.justifyContent = "center";
+  document.body.style.alignItems = "center";
+  document.body.style.height = "100vh";
+  document.body.style.overflow = "hidden";
+}
+    
+
+ 
 
   </script>
 
